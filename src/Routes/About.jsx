@@ -3,7 +3,7 @@ import React from 'react'
 const About = () => {
   return (
     <div>
-      about pass me not
+      about pass me nott
     </div>
   )
 }
