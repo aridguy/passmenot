@@ -11,6 +11,7 @@ const Home = () => {
         <Landing />
       </div>
       <Blogs />
+      
     </div>
   );
 };

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Navbar from "../Component/Navbar";
 import Msg from "../Assets/msg.svg";
 import Swal from "sweetalert2";
+import Footer from "../Component/Footer";
 
 const Contact = () => {
   // const [name, setName] = useState("");
@@ -67,6 +68,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
