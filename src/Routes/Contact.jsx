@@ -1,8 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../Component/Navbar";
 import Msg from "../Assets/msg.svg";
+import Swal from "sweetalert2";
 
 const Contact = () => {
+  // const [name, setName] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [message, setMessage] = useState("");
+  // // const [state, handleSubmit] = useForm("xqkvjawa");
+  // // if (state.succeeded) {
+    
+  //   Swal.fire(
+  //     "Message sent successfully",
+  //     "we will get back to you as soon as posible",
+  //     "success"
+  //   // );
+  // }
+
+  
   return (
     <div>
       <Navbar />
@@ -35,13 +50,13 @@ const Contact = () => {
             <div className="">
               <form>
                 <div>
-                  <input type="text" placeholder="your name" />
+                  <input id="name" type="text" placeholder="your name"  />
                 </div>
                 <div>
-                  <input type="email" placeholder="email" />
+                  <input type="email" placeholder="email"  />
                 </div>
                 <div>
-                  <input type="text" placeholder="message" />
+                  <input id="email" type="text" placeholder="message"  />
                 </div>
                 <div>
                   <button class="sendBtn float-right mt-5">Send</button>

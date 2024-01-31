@@ -35,13 +35,13 @@ const Navbar = () => {
             </ul>
             <div className="d-flex align-items-center gap-5">
               <p className="fs-6 cursor menu">
-                <Link to="/about">About</Link>
+                <Link className="text-black" to="/about">About</Link>
+              </p>
+              <p >
+                <Link className="text-black" to="/articles">Articles</Link>
               </p>
               <p className="fs-6 cursor menu">
-                <Link to="/articles">Articles</Link>
-              </p>
-              <p className="fs-6 cursor menu">
-                <Link to="/contact">contact</Link>
+                <Link className="text-black" to="/contact">Contact</Link>
               </p>
             </div>
           </div>
