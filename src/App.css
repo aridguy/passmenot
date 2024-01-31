@@ -1,6 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=Raleway:wght@300&family=Work+Sans&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
 /* NAVBAR STYLES HERE */
 .menu{
     text-transform: uppercase;
@@ -19,4 +19,38 @@
 
 .cursor{
     cursor: pointer;
+    color: gold;
+}
+
+body{
+    color: black;
+}
+
+.intouch{
+    font-size: 70px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+input {
+    background-color: #43c61b00;
+    border: none;
+    border-bottom: 2px dotted rgb(0, 0, 0);
+    color: gold;
+    font-size: 20px;
+    margin-top: 1.5em;
+    outline: none;
+    padding-bottom: 0.8em;
+    padding-left: 0.5em;
+    width: 100%;
+}
+
+.sendBtn {
+    background-color: #44c61b;
+    border: none;
+    border-radius: 50px;
+    color: #fff;
+    font-family: Euclid Circular A;
+    height: 3.4em;
+    outline: none;
+    width: 8em;
 }
