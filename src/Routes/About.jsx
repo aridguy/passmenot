@@ -1,9 +1,10 @@
 import React from 'react'
+import Navbar from '../Component/Navbar'
 
 const About = () => {
   return (
     <div>
-      about pass me not
+     <Navbar />
     </div>
   )
 }

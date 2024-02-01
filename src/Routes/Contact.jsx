@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import Navbar from "../Component/Navbar";
 import Msg from "../Assets/msg.svg";
-import Swal from "sweetalert2";
+// import Swal from "sweetalert2";
 import Footer from "../Component/Footer";
 
 const Contact = () => {
