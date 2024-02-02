@@ -7,8 +7,7 @@ import Footer from "../Component/Footer";
 import { Link } from "react-router-dom";
 
 const Blogs = () => {
-  const [showModal, setShowModal] = useState(false);
-  setShowModal(false)
+  
   return (
     <div>
       <div className="container mt-5">
@@ -89,25 +88,9 @@ const Blogs = () => {
         </div>
       </div>
       <Footer />
-      {showModal && (
-        <div>
-          <div className="modalBody text-white">
-            <div className="container">
-              <div className="row">
-                <div className="col-md-3"></div>
-                <div className="col-md-6">
-                  <div className="modalBodyContents">
-                    <div className="modalContent">
-                      <div className="modalBackground"></div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-3"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
+      
+       
+
     </div>
   );
 };
