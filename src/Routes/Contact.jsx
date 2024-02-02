@@ -41,7 +41,7 @@ const Contact = () => {
         },
         () => {
           Swal.fire({
-            title: "ERROR",
+            title: "ERROR!",
             text: "hmm! check your internet connection",
             icon: "error",
           });

@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  // initial state for every fuctions called
+
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light shadow-1 bg-white">
@@ -35,18 +37,35 @@ const Navbar = () => {
             </ul>
             <div className="d-flex align-items-center gap-5">
               <p className="fs-6 cursor menu">
-                <Link className="text-black" to="/about">About</Link>
+                <Link className="text-black" to="/about">
+                  About
+                </Link>
               </p>
-              <p >
-                <Link className="text-black" to="/articles">Articles</Link>
+              <p>
+                <Link className="text-black" to="/articles">
+                  Articles
+                </Link>
               </p>
               <p className="fs-6 cursor menu">
-                <Link className="text-black" to="/contact">Contact</Link>
+                <Link className="text-black" to="/contact">
+                  Contact
+                </Link>
+              </p>
+              <p className="fs-6 cursor menu">
+                <img
+                  src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img (31).webp"
+                  className="rounded-circle"
+                  height="22"
+                  alt="Portrait of a Woman"
+                  loading="lazy"
+                />
               </p>
             </div>
           </div>
         </div>
       </nav>
+
+    
     </div>
   );
 };
