@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 
 const Blogs = () => {
   const [showModal, setShowModal] = useState(false);
+  setShowModal(false)
   return (
     <div>
       <div className="container mt-5">
