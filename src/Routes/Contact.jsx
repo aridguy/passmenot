@@ -1,8 +1,10 @@
 import React from "react";
 import Navbar from "../Component/Navbar";
 import Msg from "../Assets/msg.svg";
+import emailjs from "emailjs-com";
 // import Swal from "sweetalert2";
 import Footer from "../Component/Footer";
+import Swal from "sweetalert2";
 
 const Contact = () => {
   // const [name, setName] = useState("");
@@ -10,7 +12,7 @@ const Contact = () => {
   // const [message, setMessage] = useState("");
   // // const [state, handleSubmit] = useForm("xqkvjawa");
   // // if (state.succeeded) {
-    
+
   //   Swal.fire(
   //     "Message sent successfully",
   //     "we will get back to you as soon as posible",
@@ -18,12 +20,41 @@ const Contact = () => {
   //   // );
   // }
 
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_c36uasw",
+        "template_uc2vqcq",
+        e.target,
+        "gCIZmp6fqkEzLSaqq"
+      )
+      .then(
+        () => {
+          // console.log(result.text);
+          Swal.fire({
+            title: "Good job!",
+            text: "Message has been sent!",
+            icon: "success",
+          });
+        },
+        () => {
+          Swal.fire({
+            title: "ERROR",
+            text: "hmm! check your internet connection",
+            icon: "error",
+          });
+        }
+      );
+    e.target.reset();
+  };
 
   return (
     <div>
       <Navbar />
 
-      <h2 class="h1-responsive font-weight-bold text-center my-4">
+      <h2 className="h1-responsive font-weight-bold text-center my-4">
         Contact us
       </h2>
       <p className="text-center w-responsive mx-auto mb-5">
@@ -49,19 +80,35 @@ const Contact = () => {
           </div>
           <div className="col-md-6">
             <div className="">
-              <form>
-              
+              <form onSubmit={sendEmail}>
                 <div>
-                  <input id="name" type="text" placeholder="your name"  />
-                </div>
-                <div >
-                  <input type="email" placeholder="email"  />
+                  <input
+                    required
+                    id="name"
+                    type="text"
+                    placeholder="your name"
+                    name="name"
+                  />
                 </div>
                 <div>
-                  <input id="email" type="text" placeholder="message"  />
+                  <input
+                    required
+                    type="email"
+                    placeholder="email"
+                    name="email"
+                  />
                 </div>
                 <div>
-                  <button class="sendBtn float-right mt-5">Send</button>
+                  <input
+                    required
+                    id="email"
+                    type="text"
+                    placeholder="message"
+                    name="message"
+                  />
+                </div>
+                <div>
+                  <button className="sendBtn float-right mt-5">Send</button>
                 </div>
               </form>
             </div>

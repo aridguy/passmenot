@@ -3,6 +3,7 @@ import Post1 from "../Assets/blogimages/post1.png";
 import Post2 from "../Assets/blogimages/post2.jpeg";
 import Post3 from "../Assets/blogimages/post3.png";
 import Post4 from "../Assets/blogimages/post4.png";
+import Footer from "../Component/Footer";
 
 const Blogs = () => {
   return (
@@ -51,6 +52,7 @@ const Blogs = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

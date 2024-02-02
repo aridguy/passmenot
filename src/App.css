@@ -26,7 +26,7 @@ body{
     color: black;
 }
 .brand{
-    color: rgb(133, 114, 9);;
+    color: rgb(207, 179, 17);;
 }
 .intouch{
     font-size: 70px;
@@ -57,4 +57,24 @@ input {
     outline: none;
     width: 8em;
     float: right;
+}
+
+.titless{
+    font: normal normal 12px pacifico;
+}
+
+
+
+/* social boxex sticky side */
+.socialbox a {
+    color: #fff;
+    font-size: 20px;
+    margin-top: 20%;
+    padding: 15px;
+    position: fixed;
+    right: 1px;
+    text-decoration: none;
+    transition: s .4;
+    width: 38px;
+    z-index: 999;
 }
