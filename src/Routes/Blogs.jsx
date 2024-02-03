@@ -1,13 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Post1 from "../Assets/blogimages/post1.png";
 import Post2 from "../Assets/blogimages/post2.jpeg";
 import Post3 from "../Assets/blogimages/post3.png";
 import Post4 from "../Assets/blogimages/post4.png";
 import Footer from "../Component/Footer";
 import { Link } from "react-router-dom";
+import { createClient } from "contentful";
 
 const Blogs = () => {
-  
+  const [posts, setPosts] = useState([]);
+  const client = createClient({
+    space: "zmg7ydrs3juv",
+    accessToken: "AZ0Is6DQZ10McZWNUd9_RNgOOfm730KHPERpk8Gaa5k",
+  });
+
+  useEffect(() => {
+    const getAllEntries = async () => {
+      try {
+        await client.getEntries().then((entries) =>{
+          console.log(entries)
+          // setPosts(entries.items);
+          setPosts(entries)
+        })
+      } catch (error) {
+    console.log("error");
+      }
+    } 
+    getAllEntries()
+
+  }, []);
   return (
     <div>
       <div className="container mt-5">
@@ -56,11 +77,14 @@ const Blogs = () => {
                     </form>
                   </div>
                 </div>
-                <div className="row mt-5">
+
+                {posts?.items?.map((post) => 
+                <div className="row mt-5" key={post.sys.id}>
                   <div className="col-md-6">
                     <p className="fs-2 fw-bold text-secondary">
-                      5 REASONS WHY DARK <br /> MODE MATTERS
+                      5 REAS ONS WHY DARK <br /> MODE MATTERS
                     </p>
+
                     <p className="fs-5">
                       According to an American survey, children between the ages
                       of 8-12 and 13-18 spend a daily average of 4 hours, 44
@@ -68,29 +92,35 @@ const Blogs = () => {
                       screens.
                     </p>
                     <p>
-                      <small className="text-black cursor">Share</small>
+                      <small className="text-black cursor">
+                        wriiten by:{" "}
+                        <b>
+                          <i>Kehinde</i>
+                        </b>
+                      </small>
                     </p>
+
                     <button
                       type="button"
                       className="btn btn-lg btn-secondary btn-rounded "
                       data-mdb-ripple-init
                     >
-                      Read More
+                      <Link to="/blogdetails">Read More</Link>
                     </button>
                   </div>
                   <div className="col-md-6">
                     <img width="85%" src={Post1} alt="normal post " />
                   </div>
                 </div>
+                )}
+
+
               </div>
             </section>
           </div>
         </div>
       </div>
       <Footer />
-      
-       
-
     </div>
   );
 };

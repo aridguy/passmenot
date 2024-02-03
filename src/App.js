@@ -7,6 +7,7 @@ import Home from './Routes/Home';
 import Blogs from './Routes/Blogs';
 import About from './Routes/About';
 import Articles from './Routes/Articles';
+import BlogDetails from './Routes/BlogDetails';
 
 const App = () => {
   return (
@@ -14,10 +15,11 @@ const App = () => {
     <BrowserRouter>
     <Routes>
         <Route index element={<Home />} />
-        <Route path="blogs" element={<Blogs />} />
-        <Route path="contact" element={<Contact />} />
-        <Route path="about" element={<About />} />
-        <Route path="articles" element={<Articles />} />
+        <Route path="/blogs" element={<Blogs />} />
+        <Route path="/blogdetails/:id" element={<BlogDetails />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/articles" element={<Articles />} />
         <Route path="*" element={<Notfound />} />
     </Routes>
   </BrowserRouter>
