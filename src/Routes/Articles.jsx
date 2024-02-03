@@ -45,7 +45,9 @@ const Articles = () => {
           </div>
         </div>
       </div>
-      <Blogs />
+      {
+        <Blogs />
+      }
     </div>
   );
 };

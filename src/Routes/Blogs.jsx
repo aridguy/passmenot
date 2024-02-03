@@ -28,7 +28,7 @@ const Blogs = () => {
     } 
     getAllEntries()
 
-  }, []);
+  }, [client]);
   return (
     <div>
       <div className="container mt-5">
