@@ -6,8 +6,13 @@ import Post4 from "../Assets/blogimages/post4.png";
 import Footer from "../Component/Footer";
 import { Link } from "react-router-dom";
 import { createClient } from "contentful";
+// import searchBlogPosts from "../Helpers/Helpers"
 
 const Blogs = () => {
+  // const [visible, setVisible] = useState(5);
+  // const shoeMoreBlogs = () => {
+  //   setVisible(visible + 2);
+  // };
   const [posts, setPosts] = useState([]);
   const client = createClient({
     space: "zmg7ydrs3juv",
@@ -17,18 +22,19 @@ const Blogs = () => {
   useEffect(() => {
     const getAllEntries = async () => {
       try {
-        await client.getEntries().then((entries) =>{
-          console.log(entries)
+        await client.getEntries().then((entries) => {
+          console.log(entries);
           // setPosts(entries.items);
-          setPosts(entries)
-        })
+          setPosts(entries);
+        });
       } catch (error) {
-    console.log("error");
+        console.log("error");
       }
-    } 
-    getAllEntries()
-
+    };
+    getAllEntries();
   }, [client]);
+  const [searchTerm, setSearchTerm] = useState('');
+  
   return (
     <div>
       <div className="container mt-5">
@@ -73,48 +79,47 @@ const Blogs = () => {
                         className="form-control"
                         type="search"
                         placeholder="search posts"
+                        value={searchTerm}
+                        onChange={(e) => setSearchTerm(e.target.value)}
                       />
                     </form>
                   </div>
                 </div>
 
-                {posts?.items?.map((post) => 
-                <div className="row mt-5" key={post.sys.id}>
-                  <div className="col-md-6">
-                    <p className="fs-2 fw-bold text-secondary">
-                      5 REAS ONS WHY DARK <br /> MODE MATTERS
-                    </p>
+                {posts?.items?.map((post) => (
+                  <div className="row mt-5" key={post.sys.id}>
+                    <div className="col-md-6">
+                      <p className="fs-2 fw-bold text-secondary">
+                        {post?.fields?.blogTitles}
+                      </p>
 
-                    <p className="fs-5">
-                      According to an American survey, children between the ages
-                      of 8-12 and 13-18 spend a daily average of 4 hours, 44
-                      minutes and 7 hours, 22 minutes respectively, staring at
-                      screens.
-                    </p>
-                    <p>
-                      <small className="text-black cursor">
-                        wriiten by:{" "}
-                        <b>
-                          <i>Kehinde</i>
-                        </b>
-                      </small>
-                    </p>
+                      <p className="fs-5">{post?.fields?.shortContents}</p>
+                      <p>
+                        <small className="text-black cursor">
+                          wriiten by:{" "}
+                          <b>
+                            <i>Kehinde</i>
+                          </b>
+                        </small>
+                      </p>
 
-                    <button
-                      type="button"
-                      className="btn btn-lg btn-secondary btn-rounded "
-                      data-mdb-ripple-init
-                    >
-                      <Link to="/blogdetails">Read More</Link>
-                    </button>
+                      <button
+                        type="button"
+                        className="btn btn-lg btn-secondary btn-rounded "
+                        data-mdb-ripple-init
+                      >
+                        <Link to="/blogdetails">Read More</Link>
+                      </button>
+                    </div>
+                    <div className="col-md-6">
+                      <img
+                        width="85%"
+                        src={post?.fields?.blogImage?.fields?.file?.url}
+                        alt="as"
+                      />
+                    </div>
                   </div>
-                  <div className="col-md-6">
-                    <img width="85%" src={Post1} alt="normal post " />
-                  </div>
-                </div>
-                )}
-
-
+                ))}
               </div>
             </section>
           </div>
