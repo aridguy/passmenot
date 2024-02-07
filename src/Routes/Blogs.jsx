@@ -1,18 +1,11 @@
 import React, { useEffect, useState } from "react";
-import Post1 from "../Assets/blogimages/post1.png";
-import Post2 from "../Assets/blogimages/post2.jpeg";
-import Post3 from "../Assets/blogimages/post3.png";
-import Post4 from "../Assets/blogimages/post4.png";
+
 import Footer from "../Component/Footer";
 import { Link } from "react-router-dom";
 import { createClient } from "contentful";
-// import searchBlogPosts from "../Helpers/Helpers"
+import { shuffle } from "lodash"; // Importing shuffle function from lodash
 
 const Blogs = () => {
-  // const [visible, setVisible] = useState(5);
-  // const shoeMoreBlogs = () => {
-  //   setVisible(visible + 2);
-  // };
   const [posts, setPosts] = useState([]);
   const client = createClient({
     space: "zmg7ydrs3juv",
@@ -33,8 +26,8 @@ const Blogs = () => {
     };
     getAllEntries();
   }, [client]);
-  const [searchTerm, setSearchTerm] = useState('');
-  
+  const [searchTerm, setSearchTerm] = useState("");
+
   return (
     <div>
       <div className="container mt-5">
@@ -61,10 +54,15 @@ const Blogs = () => {
                 </Link>
               </p>
               <hr />
-              <img className="mt-1" width="100%" src={Post1} alt="post1" />
-              <img className="mt-1" width="100%" src={Post2} alt="post1" />
-              <img className="mt-1" width="100%" src={Post3} alt="post1" />
-              <img className="mt-1" width="100%" src={Post4} alt="post1" />
+
+              {posts?.items?.slice(0, 4).map((post) => (
+                <img
+                  className="mt-1"
+                  width="100%"
+                  src={post?.fields?.blogImage?.fields?.file?.url}
+                  alt="post1"
+                />
+              ))}
             </div>
           </div>
           {/* main blog section second column */}
@@ -86,7 +84,7 @@ const Blogs = () => {
                   </div>
                 </div>
 
-                {posts?.items?.map((post) => (
+                {posts?.items?.slice(0, 4).map((post) => (
                   <div className="row mt-5" key={post.sys.id}>
                     <div className="col-md-6">
                       <p className="fs-2 fw-bold text-secondary">
