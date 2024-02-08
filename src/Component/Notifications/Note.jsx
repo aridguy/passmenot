@@ -4,22 +4,17 @@ const Note = () => {
   return (
     <div>
       <marquee>
-        <small>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum
-          dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-          velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-          occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-          mollit anim id est laborum.
+        <small className="fw-bolder fs-4">NOTICE:</small> &nbsp;&nbsp;
+        <small className="fs-4 ">
+          This platform will show you how you can deal with situations of life
+          with the aid of Gods errands personalities to help solve the varied
+          problems that God, in his infinite wisdom has chosen to bestow upon
+          his beloved children during the courses of their very mortal lives,
+          all you as an individual have to do is diligently follow the easy to
+          understand instructions given on this platform. The information will
+          be available to the public both in English and yoruba language
         </small>
+        
       </marquee>
     </div>
   );
