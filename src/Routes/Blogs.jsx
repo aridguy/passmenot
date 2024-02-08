@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Footer from "../Component/Footer";
 import { Link } from "react-router-dom";
 import { createClient } from "contentful";
-import { shuffle } from "lodash"; // Importing shuffle function from lodash
+
 
 const Blogs = () => {
   const [posts, setPosts] = useState([]);
@@ -55,7 +55,7 @@ const Blogs = () => {
               </p>
               <hr />
 
-              {posts?.items?.slice(0, 4).map((post) => (
+              {posts?.items?.slice(0, 2).map((post) => (
                 <img
                   className="mt-1"
                   width="100%"
