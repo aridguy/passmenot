@@ -60,6 +60,7 @@ const Footer = () => {
             https://twitter.com/passmenot43
           </a>
         </div>
+        <small>designed by <a href="https://aridguy.github.io/">codetechs</a></small>
       </footer>
     </div>
   );

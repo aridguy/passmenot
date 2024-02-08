@@ -111,3 +111,20 @@ input {
     top: 5em;
     right: 12em;
 }
+
+
+
+/* another scroilling component */
+.scrolling-text {
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide the overflow */
+  }
+  
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(100%); /* Start off-screen */
+    }
+    100% {
+      transform: translateX(-100%); /* Move to the left */
+    }
+  }

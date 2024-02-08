@@ -14,7 +14,7 @@ const Note = () => {
           understand instructions given on this platform. The information will
           be available to the public both in English and yoruba language
         </small>
-        
+        <span className="fs-2 text-white fw-bolder">X</span>
       </marquee>
     </div>
   );

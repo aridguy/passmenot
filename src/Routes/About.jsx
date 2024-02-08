@@ -46,29 +46,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="bg-mute mt-5">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-7">
-              <small className="text-dark fs-5">
-                This platform will show you how you can deal with situations of
-                life with the aid of Gods errands personalities to help solve
-                the varied problems that God, in his infinite wisdom has chosen
-                to bestow upon his beloved children during the courses of their
-                very mortal lives, all you as an individual have to do is
-                diligently follow the easy to understand instructions given on
-                this platform. The information will be available to the public
-                both in English and yoruba language
-              </small>
-            </div>
-            <div className="col-md-5">
-            <div>
-            <img width="100%" className="float-end" src={Pic1} alt="pic_1" />
-            </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      
       <Footer />
     </div>
   );
