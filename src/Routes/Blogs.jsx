@@ -4,7 +4,6 @@ import Footer from "../Component/Footer";
 import { Link } from "react-router-dom";
 import { createClient } from "contentful";
 
-
 const Blogs = () => {
   const [posts, setPosts] = useState([]);
   const client = createClient({
@@ -57,6 +56,7 @@ const Blogs = () => {
 
               {posts?.items?.slice(0, 2).map((post) => (
                 <img
+                  key={post.sys.id}
                   className="mt-1"
                   width="100%"
                   src={post?.fields?.blogImage?.fields?.file?.url}
@@ -106,7 +106,7 @@ const Blogs = () => {
                         className="btn btn-lg btn-secondary btn-rounded "
                         data-mdb-ripple-init
                       >
-                        <Link to="/blogdetails">Read More</Link>
+                <Link to={`/articledetails/${post.sys.id}`}>Read More</Link>
                       </button>
                     </div>
                     <div className="col-md-6">

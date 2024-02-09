@@ -1,130 +1,163 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Inter&family=Raleway:wght@300&family=Work+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Raleway:wght@300&family=Work+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap");
 /* NAVBAR STYLES HERE */
-.menu{
-    /* text-transform: uppercase; */
-    color: rgb(133, 114, 9);
-    font-size: 10px;
+.menu {
+  /* text-transform: uppercase; */
+  color: rgb(133, 114, 9);
+  font-size: 10px;
 }
 
 /* landing page hero background */
-#HeroBg{
-    background-image: url(../src/Assets/Hero.jpg);
-    height: 60vh;
-    background-size: cover;
-    background-repeat: no-repeat;
-    
+#HeroBg {
+  background-image: url(../src/Assets/Hero.jpg);
+  height: 60vh;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.cursor{
-    cursor: pointer;
-    color: gold;
+.cursor {
+  cursor: pointer;
+  color: gold;
 }
 
-body{
-    color: black;
+body {
+  color: black;
 }
-.brand{
-    color: rgb(207, 179, 17);;
+.brand {
+  color: rgb(207, 179, 17);
 }
-.intouch{
-    font-size: 70px;
-    font-family: 'Ubuntu', sans-serif;
-    color: rgb(133, 114, 9);
+.intouch {
+  font-size: 70px;
+  font-family: "Ubuntu", sans-serif;
+  color: rgb(133, 114, 9);
 }
 
 input {
-    background-color: #43c61b00;
-    border: none;
-    border-bottom: 2px dotted rgb(0, 0, 0);
-    color: rgb(133, 114, 9);
-    font-size: 20px;
-    margin-top: 1.5em;
-    outline: none;
-    padding-bottom: 0.8em;
-    padding-left: 0.5em;
-    width: 100%;
+  background-color: #43c61b00;
+  border: none;
+  border-bottom: 2px dotted rgb(0, 0, 0);
+  color: rgb(133, 114, 9);
+  font-size: 20px;
+  margin-top: 1.5em;
+  outline: none;
+  padding-bottom: 0.8em;
+  padding-left: 0.5em;
+  width: 100%;
 }
 
 .sendBtn {
-    background-color: rgb(133, 114, 9);
-    border: none;
-    border-radius: 50px;
-    color: #fff;
-    font-family: Euclid Circular A;
-    height: 3.4em;
-    outline: none;
-    width: 8em;
-    float: right;
+  background-color: rgb(133, 114, 9);
+  border: none;
+  border-radius: 50px;
+  color: #fff;
+  font-family: Euclid Circular A;
+  height: 3.4em;
+  outline: none;
+  width: 8em;
+  float: right;
 }
 
-.titless{
-    font: normal normal 12px pacifico;
+.titless {
+  font: normal normal 12px pacifico;
 }
-
-
 
 /* social boxex sticky side */
 .socialbox a {
-    color: #fff;
-    font-size: 20px;
-    margin-top: 20%;
-    padding: 15px;
-    position: fixed;
-    right: 1px;
-    text-decoration: none;
-    transition: s .4;
-    width: 38px;
-    z-index: 999;
+  color: #fff;
+  font-size: 20px;
+  margin-top: 20%;
+  padding: 15px;
+  position: fixed;
+  right: 1px;
+  text-decoration: none;
+  transition: s 0.4;
+  width: 38px;
+  z-index: 999;
 }
-
-
 
 /*  */
 
 /* the modal popup */
-.modalBody{
-    background-color: rgba(0, 0, 0, 0.781);
-    height: 43em;
-    position: fixed;
-    width: 100%;
-    top: 0px;
-    /* z-index: 999; */
+.modalBody {
+  background-color: rgba(0, 0, 0, 0.781);
+  height: 43em;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  /* z-index: 999; */
 }
 
-.modalBackground{
-    background-color: #3b72ca00;
-    width: 100%;
-    height: 18em;
-    border-radius: 10px;
-    margin-top: 10em;
+.modalBackground {
+  background-color: #3b72ca00;
+  width: 100%;
+  height: 18em;
+  border-radius: 10px;
+  margin-top: 10em;
 }
 
 /* customimized modal sectionstyles only */
 /*  clossing the modal */
 
-.modalCloser{
-    float: right;
-    cursor: pointer;
-    position: absolute;
-    top: 5em;
-    right: 12em;
+.modalCloser {
+  float: right;
+  cursor: pointer;
+  position: absolute;
+  top: 5em;
+  right: 12em;
 }
-
-
 
 /* another scroilling component */
 .scrolling-text {
-    white-space: nowrap; /* Prevent text from wrapping */
-    overflow: hidden; /* Hide the overflow */
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide the overflow */
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%); /* Start off-screen */
   }
-  
-  @keyframes scroll-left {
-    0% {
-      transform: translateX(100%); /* Start off-screen */
-    }
-    100% {
-      transform: translateX(-100%); /* Move to the left */
-    }
+  100% {
+    transform: translateX(-100%); /* Move to the left */
   }
+}
+
+/* 404 page styles */
+
+/*======================
+    404 page
+=======================*/
+
+.page_404 {
+  padding: 40px 0;
+  background: #fff;
+  font-family: "Arvo", serif;
+}
+
+.page_404 img {
+  width: 100%;
+}
+
+.four_zero_four_bg {
+  background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
+  height: 400px;
+  background-position: center;
+}
+
+.four_zero_four_bg h1 {
+  font-size: 80px;
+}
+
+.four_zero_four_bg h3 {
+  font-size: 80px;
+}
+
+.link_404 {
+  color: #fff !important;
+  padding: 10px 20px;
+  background: rgb(141, 121, 6);
+  margin: 20px 0;
+  display: inline-block;
+}
+.contant_box_404 {
+  margin-top: -50px;
+}

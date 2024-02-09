@@ -52,9 +52,11 @@ const Navbar = () => {
                 </Link>
               </p>
               <p className="fs-6 cursor menu">
+              
                 <img
+                  hidden
                   src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img (31).webp"
-                  className="rounded-circle"
+                  className="rounded-circle hidden"
                   height="22"
                   alt="Portrait of a Woman"
                   loading="lazy"
@@ -64,8 +66,6 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-
-    
     </div>
   );
 };
