@@ -32,6 +32,14 @@ body {
   color: rgb(133, 114, 9);
 }
 
+@media only screen and (max-width: 600px) {
+  .intouch {
+    font-size: 40px;
+    font-family: "Ubuntu", sans-serif;
+    color: rgb(133, 114, 9);
+  }
+}
+
 input {
   background-color: #43c61b00;
   border: none;

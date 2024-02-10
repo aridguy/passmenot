@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "../Component/Navbar";
 import IconAbout from "../Assets/about_icon.svg";
 import Footer from "../Component/Footer";
-import Pic1 from "../Assets/about/pic_1.jpg"
+
 
 const About = () => {
   return (

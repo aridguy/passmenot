@@ -36,7 +36,7 @@ const Footer = () => {
             <a
               data-mdb-ripple-init
               className="btn btn-floating m-1"
-              href="#!"
+              href="https://www.instagram.com/passmenot21/"
               role="button"
             >
               <i className="fab fa-instagram"></i>

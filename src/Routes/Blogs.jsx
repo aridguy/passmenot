@@ -73,7 +73,7 @@ const Blogs = () => {
               ))}
             </div>
           </div>
-          {/* main blog section second column */}
+     
           <div className="col-md-10">
             <section>
               <div className="container-fluid">

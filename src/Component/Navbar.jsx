@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import Logo from "../Assets/logo.png"
 const Navbar = () => {
   // initial state for every fuctions called
 
@@ -10,8 +10,8 @@ const Navbar = () => {
         <div className="container">
           <a className="navbar-brand me-2" href="https://mdbgo.com/">
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/d/dd/Chainlink_Logo.png"
-              height="16"
+              src={Logo}
+              height="40"
               alt="MDB Logo"
               loading="lazy"
             />
