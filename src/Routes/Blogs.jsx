@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
 
 import Footer from "../Component/Footer";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { createClient } from "contentful";
+// import { useLocation } from "react-router-dom";
 
 const Blogs = () => {
+  const navigate = useNavigate();
+  // const location = useLocation();
   const [posts, setPosts] = useState([]);
   const client = createClient({
     space: "zmg7ydrs3juv",
@@ -102,11 +105,15 @@ const Blogs = () => {
                       </p>
 
                       <button
-                        type="button"
+                        onClick={() =>
+                          navigate(`/ArticleDetails/${post.sys.id}`, {
+                            state: { ...post },
+                          })
+                        }
                         className="btn btn-lg btn-secondary btn-rounded "
                         data-mdb-ripple-init
                       >
-                <Link to={`/articledetails/${post.sys.id}`}>Read More</Link>
+                        Read More
                       </button>
                     </div>
                     <div className="col-md-6">
