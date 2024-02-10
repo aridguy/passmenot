@@ -12,9 +12,14 @@ const Note = () => {
           his beloved children during the courses of their very mortal lives,
           all you as an individual have to do is diligently follow the easy to
           understand instructions given on this platform. The information will
-          be available to the public both in English and yoruba language
+          be available to the public both in English and yoruba language.
+        </small>{" "}
+        &nbsp;
+        <small className="fs-4 ">
+          Also, identifying your problems in time will give us opportunity to
+          suggest practical solutions you can apply to banish the problems
         </small>
-        <span className="fs-2 text-white fw-bolder">X</span>
+        <span></span>
       </marquee>
     </div>
   );

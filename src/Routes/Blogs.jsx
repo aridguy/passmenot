@@ -57,10 +57,15 @@ const Blogs = () => {
               </p>
               <hr />
 
-              {posts?.items?.slice(0, 2).map((post) => (
+              {posts?.items?.slice(0, 3).map((post) => (
                 <img
+                onClick={() =>
+                  navigate(`/ArticleDetails/${post.sys.id}`, {
+                    state: { ...post },
+                  })
+                }
                   key={post.sys.id}
-                  className="mt-1"
+                  className="mt-1 cursor"
                   width="100%"
                   src={post?.fields?.blogImage?.fields?.file?.url}
                   alt="post1"
@@ -87,7 +92,7 @@ const Blogs = () => {
                   </div>
                 </div>
 
-                {posts?.items?.slice(0, 4).map((post) => (
+                {posts?.items?.slice(0, 3).map((post) => (
                   <div className="row mt-5" key={post.sys.id}>
                     <div className="col-md-6">
                       <p className="fs-2 fw-bold text-secondary">
