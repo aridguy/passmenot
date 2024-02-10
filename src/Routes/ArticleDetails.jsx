@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Navbar from "../Component/Navbar";
 // import { Link } from "react-router-dom";
 // import { createClient } from "contentful";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import Footer from "../Component/Footer";
 
 
 const ArticleDetails = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 const location = useLocation();
   
   // const [searchTerm, setSearchTerm] = useState("");
