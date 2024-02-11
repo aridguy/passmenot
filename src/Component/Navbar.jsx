@@ -8,7 +8,7 @@ const Navbar = () => {
     <div>
       <nav className="navbar navbar-expand-lg navbar-light shadow-1 bg-white">
         <div className="container">
-          <a className="navbar-brand me-2" href="https://mdbgo.com/">
+          <a className="navbar-brand me-2" href="/">
             <img
               src={Logo}
               height="40"
